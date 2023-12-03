@@ -1,0 +1,35 @@
+@model Category
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Add new category</title>
+</head>
+<body>
+<div>
+    
+    <form method="post">
+        <div class="">
+            <div class="row pb-2">
+                <h2 class="text-primary">Create category</h2>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name">Category Name</label>
+            <input asp-for="Name" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DisplayOrder">Display Order</label>
+            <input asp-for="DisplayOrder" class="form-control"/>
+        </div>
+        
+        <div class="d-flex justify-content-between">
+            <a asp-controller="Category" asp-action="Index" class="btn btn-secondary">Back</a>
+            <button class="btn btn-primary">Create</button>
+        </div>
+    </form>
+    
+</div>
+</body>
+</html>
