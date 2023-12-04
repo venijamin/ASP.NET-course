@@ -1,7 +1,10 @@
 @model List<Category>
 
 
-
+@if (TempData["success"] != null)
+{
+    <h2>@TempData["success"]</h2>
+}
 
 <!DOCTYPE html>
 <html>
@@ -40,15 +43,23 @@
         <tbody>
         @foreach (var category in Model)
         {
-            <tr>
-                <td>
-                    @category.Id
+                <tr>
+                    <td>
+                        @category.Id
+                    </td>
+                    <td>
+                        @category.Name
+                    </td>
+                    <td>@category.DisplayOrder</td>
+                <td class="">
+                    
+                        <div class="btn-group" role="group">
+                             <a asp-controller="Category" asp-action="Edit" asp-route-id="@category.Id" type="button" class="btn btn-secondary">Edit</a>
+                             <a asp-controller="Category" asp-action="Delete" asp-route-id="@category.Id" type="button" class="btn btn-danger">Delete</a>
+                       </div>    
                 </td>
-                <td>
-                    @category.Name
-                </td>
-                <td>@category.DisplayOrder</td>
-            </tr>
+                </tr>
+            
         }
         </tbody>
     </table>
