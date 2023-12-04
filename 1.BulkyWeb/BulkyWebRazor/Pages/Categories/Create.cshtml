@@ -1,0 +1,46 @@
+@page
+@model BulkyWebRazor.Pages.Categories.Create
+
+@using System.Security.Claims
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Add new category</title>
+</head>
+<body>
+<div>
+    
+    <form method="post">
+        <div class="">
+            <div class="row pb-2">
+                <h2 class="text-primary">Create category</h2>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Category.Name">Category Name</label>
+            <input asp-for="Category.Name" class="form-control"/>
+            <span asp-validation-for="Category.Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Category.DisplayOrder">Display Order</label>
+            <input asp-for="Category.DisplayOrder" class="form-control"/>
+            <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
+        </div>
+        
+        <div class="d-flex justify-content-between">
+            <a asp-page="/Categories/Index" class="btn btn-secondary">Back</a>
+            <button class="btn btn-primary">Create</button>
+        </div>
+    </form>
+    
+    
+    @section Scripts
+    {
+        <partial name="_ValidationScriptsPartial"/>
+    }
+    
+</div>
+</body>
+</html>

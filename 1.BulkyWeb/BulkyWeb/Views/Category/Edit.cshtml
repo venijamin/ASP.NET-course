@@ -1,0 +1,44 @@
+@using System.Security.Claims
+@model Category
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Editing @Model.Name</title>
+</head>
+<body>
+<div>
+    
+    <form method="post">
+        <div class="">
+            <div class="row pb-2">
+                <h2 class="text-primary">Edit category</h2>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name">Category Name</label>
+            <input asp-for="Name" value="@Model.Name" class="form-control"/>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DisplayOrder">Display Order</label>
+            <input asp-for="DisplayOrder" value="@Model.DisplayOrder" class="form-control"/>
+            <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+        </div>
+        
+        <div class="d-flex justify-content-between">
+            <a asp-controller="Category" asp-action="Index" class="btn btn-secondary">Back</a>
+            <button class="btn btn-primary">Save</button>
+        </div>
+    </form>
+    
+    
+    @section Scripts
+    {
+        <partial name="_ValidationScriptsPartial"/>
+    }
+    
+</div>
+</body>
+</html>
