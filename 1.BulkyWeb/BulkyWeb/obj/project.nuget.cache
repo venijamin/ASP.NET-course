@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RGwVlJieDrsI7WhfuujfznJOJE+2wJYl5/Zr0ynYn/B6JecoE4Gv4vdvV0kU3s8JydjsuePY/KPbqK93uDD9PA==",
+  "dgSpecHash": "U7wpsAzE7nUI15lw7O9KRnzkDmI108/swUEWGHU2z4FEt6Nlqz/UqpkNcl5zsrcSWfxchOjnvC6EkeNVSjuJCA==",
   "success": true,
-  "projectFilePath": "/home/venijamin/Desktop/ASP.NET-course/1.BulkyWeb/BulkyWeb/BulkyWeb.csproj",
+  "projectFilePath": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/BulkyWeb/BulkyWeb.csproj",
   "expectedPackageFiles": [
     "/home/venijamin/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/home/venijamin/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
