@@ -1,17 +1,90 @@
 {
   "format": 1,
   "restore": {
-    "/home/venijamin/Desktop/ASP.NET-course/1.BulkyWeb/BulkyWeb/BulkyWeb.csproj": {}
+    "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/BulkyWeb/BulkyWeb.csproj": {}
   },
   "projects": {
-    "/home/venijamin/Desktop/ASP.NET-course/1.BulkyWeb/BulkyWeb/BulkyWeb.csproj": {
+    "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.DataAccess/Bulky.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/venijamin/Desktop/ASP.NET-course/1.BulkyWeb/BulkyWeb/BulkyWeb.csproj",
-        "projectName": "BulkyWeb",
-        "projectPath": "/home/venijamin/Desktop/ASP.NET-course/1.BulkyWeb/BulkyWeb/BulkyWeb.csproj",
+        "projectUniqueName": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.DataAccess/Bulky.DataAccess.csproj",
+        "projectName": "Bulky.DataAccess",
+        "projectPath": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.DataAccess/Bulky.DataAccess.csproj",
         "packagesPath": "/home/venijamin/.nuget/packages/",
-        "outputPath": "/home/venijamin/Desktop/ASP.NET-course/1.BulkyWeb/BulkyWeb/obj/",
+        "outputPath": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.DataAccess/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/venijamin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.Models/Bulky.Models.csproj": {
+                "projectPath": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.Models/Bulky.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.Models/Bulky.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.Models/Bulky.Models.csproj",
+        "projectName": "Bulky.Models",
+        "projectPath": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.Models/Bulky.Models.csproj",
+        "packagesPath": "/home/venijamin/.nuget/packages/",
+        "outputPath": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.Models/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/venijamin/.nuget/NuGet/NuGet.Config"
@@ -26,6 +99,66 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/BulkyWeb/BulkyWeb.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/BulkyWeb/BulkyWeb.csproj",
+        "projectName": "BulkyWeb",
+        "projectPath": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/BulkyWeb/BulkyWeb.csproj",
+        "packagesPath": "/home/venijamin/.nuget/packages/",
+        "outputPath": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/BulkyWeb/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/venijamin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.DataAccess/Bulky.DataAccess.csproj": {
+                "projectPath": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.DataAccess/Bulky.DataAccess.csproj"
+              },
+              "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.Models/Bulky.Models.csproj": {
+                "projectPath": "/home/venijamin/Desktop/NET/ASP.NET-course/1.BulkyWeb/Bulky.Models/Bulky.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
