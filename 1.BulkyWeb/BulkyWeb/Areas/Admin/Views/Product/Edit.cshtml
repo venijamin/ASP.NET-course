@@ -1,0 +1,52 @@
+@model Product
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Editing @Model.Title</title>
+</head>
+<body>
+<div>
+
+    <form method="post">
+        <div class="">
+            <div class="row pb-2">
+                <h2 class="text-primary">Edit product</h2>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Title">Product Name</label>
+            <input asp-for="Title" value="@Model.Title" class="form-control"/>
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Author">Author</label>
+            <input asp-for="Author" value="@Model.Author" class="form-control"/>
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ISBN">ISBN</label>
+            <input asp-for="ISBN" value="@Model.ISBN" class="form-control"/>
+            <span asp-validation-for="ISBN" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ListPrice">List Price</label>
+            <input asp-for="ListPrice" value="@Model.ListPrice" class="form-control"/>
+            <span asp-validation-for="ListPrice" class="text-danger"></span>
+        </div>
+        <div class="d-flex justify-content-between">
+            <a asp-controller="Product" asp-action="Index" class="btn btn-secondary">Back</a>
+            <button class="btn btn-primary">Save</button>
+        </div>
+    </form>
+
+
+    @section Scripts
+    {
+        <partial name="_ValidationScriptsPartial"/>
+    }
+
+</div>
+</body>
+</html>

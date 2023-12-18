@@ -1,0 +1,70 @@
+@model List<Product>
+
+
+@if (TempData["success"] != null)
+{
+    <h2>@TempData["success"]</h2>
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+</head>
+<body>
+<div>
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2>
+                Product List
+            </h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Product" asp-action="Create" class="btn btn-primary">
+                Add new product
+            </a>
+        </div>
+
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <td>
+                Id
+            </td>
+            <td>
+                Name
+            </td>
+            <td>
+                Order
+            </td>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>
+                    @product.Id
+                </td>
+                <td>
+                    @product.Title
+                </td>
+                <td>@product.ISBN</td>
+                <td>@product.Author</td>
+                <td>@product.ListPrice</td>
+                <td class="">
+
+                    <div class="btn-group" role="group">
+                        <a asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id" type="button" class="btn btn-secondary">Edit</a>
+                        <a asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id" type="button" class="btn btn-danger">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
