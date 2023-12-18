@@ -4,7 +4,9 @@
     <option name="keyValueStorage">
       <map>
         <entry key="Common:9150edcd-588d-4b58-a360-69761969d612:dbContext" value="BulkyWebRazor.Data.ApplicationDbContext" />
+        <entry key="Common:a5403f64-953c-40dc-897c-7170a786519f:dbContext" value="Bulky.DataAccess.Data.ApplicationDbContext" />
         <entry key="Common:buildConfiguration" value="Debug" />
+        <entry key="Common:enableDiagnosticLogging" value="false" />
         <entry key="Common:fbca6ddf-de6e-40c9-b1ca-779ee684af0e:dbContext" value="BulkyWeb.Data.ApplicationDbContext" />
         <entry key="Common:noBuild" value="false" />
         <entry key="Common:outputFolder" value="Migrations" />

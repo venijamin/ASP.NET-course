@@ -21,7 +21,7 @@ namespace Bulky.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("BulkyWeb.Models.Category", b =>
+            modelBuilder.Entity("Bulky.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,11 +34,12 @@ namespace Bulky.DataAccess.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Category");
 
                     b.HasData(
                         new
@@ -58,6 +59,69 @@ namespace Bulky.DataAccess.Migrations
                             Id = 3,
                             DisplayOrder = 3,
                             Name = "Category3"
+                        });
+                });
+
+            modelBuilder.Entity("Bulky.Models.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Author")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ISBN")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("ListPrice")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Product");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Author = "F. Scott Fitzgerald",
+                            ISBN = "978-3-16-148410-0",
+                            ListPrice = 25.989999999999998,
+                            Title = "The Great Gatsby"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Author = "Harper Lee",
+                            ISBN = "978-0-06-112008-4",
+                            ListPrice = 19.949999999999999,
+                            Title = "To Kill a Mockingbird"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Author = "George Orwell",
+                            ISBN = "978-0-452-28423-4",
+                            ListPrice = 22.5,
+                            Title = "1984"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Author = "J.D. Salinger",
+                            ISBN = "978-0-316-76948-0",
+                            ListPrice = 18.75,
+                            Title = "The Catcher in the Rye"
                         });
                 });
 #pragma warning restore 612, 618
